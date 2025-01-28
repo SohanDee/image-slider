@@ -4,9 +4,75 @@
     <meta charset="UTF-8">
     <title>Image Slider</title>
     <link rel="stylesheet" href="style/reset.css">
+    <style>
+        h1{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #scroll-port{
+            width: 500px;
+            height: 400px;
+            overflow: scroll;
+            border: 2px solid black;
+            white-space: nowrap;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 40px;
+
+            & .image{
+                display: inline-block;
+                /*border: 2px solid black;*/
+                height: 100%;
+                width: 100%;
+
+                & .img-title{
+                    font-size: 1.5rem;
+                    background-color: black;
+                    color: white;
+                    writing-mode: vertical-lr;
+                    transform: rotate(180deg);
+                    text-align: center;
+                    height: 95%;
+                    padding: 10px;
+                    position: sticky;
+                    left: 0;
+                }
+
+                & .image-view{
+                    height: 100%;
+                    width: 90%;
+                    object-fit: cover;
+                    border: 1px solid red;
+                }
+            }
+        }
+    </style>
 </head>
 <body>
 <h1>Image Slider</h1>
-
+<div id="scroll-port">
+    <div class="image">
+        <span class="img-title">Image 1</span>
+        <img class="image-view" src="image/image-1.jpeg" alt="Image 1">
+    </div>
+    <div class="image">
+        <span class="img-title">Image 2</span>
+        <img class="image-view" src="image/image-1.jpeg" alt="Image 1">
+    </div>
+    <div class="image">
+        <span class="img-title">Image 3</span>
+        <img class="image-view" src="image/image-1.jpeg" alt="Image 1">
+    </div>
+    <div class="image">
+        <span class="img-title">Image 4</span>
+        <img class="image-view" src="image/image-1.jpeg" alt="Image 1">
+    </div>
+    <div class="image">
+        <span class="img-title">Image 5</span>
+        <img class="image-view" src="image/image-1.jpeg" alt="Image 1">
+    </div>
+</div>
 </body>
 </html>
