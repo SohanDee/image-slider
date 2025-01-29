@@ -5,6 +5,9 @@
     <title>Image Slider</title>
     <link rel="stylesheet" href="style/reset.css">
     <style>
+        *{
+            box-sizing: border-box;
+        }
         h1{
             text-align: center;
             font-size: 2rem;
@@ -12,7 +15,7 @@
             margin-top: 20px;
         }
         #scroll-port{
-            width: 500px;
+            width: 600px;
             height: 400px;
             overflow: scroll;
             border: 2px solid black;
@@ -20,31 +23,37 @@
             margin-right: auto;
             margin-left: auto;
             margin-top: 40px;
+            scroll-snap-type: x mandatory;
 
             & .image{
                 display: inline-block;
-                /*border: 2px solid black;*/
+                border: 2px solid red;
                 height: 100%;
                 width: 100%;
+                position: relative;
+                scroll-snap-align: center;
+                scroll-snap-stop: always;
 
                 & .img-title{
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     background-color: black;
                     color: white;
                     writing-mode: vertical-lr;
                     transform: rotate(180deg);
                     text-align: center;
-                    height: 95%;
-                    padding: 10px;
+                    font-family: Poppins, sans-serif;
+                    height: 100%;
+                    padding: 20px;
                     position: sticky;
                     left: 0;
+                    opacity: 85%;
                 }
 
                 & .image-view{
                     height: 100%;
-                    width: 90%;
+                    width: 100%;
                     object-fit: cover;
-                    border: 1px solid red;
+                    position: absolute;
                 }
             }
         }
@@ -54,24 +63,19 @@
 <h1>Image Slider</h1>
 <div id="scroll-port">
     <div class="image">
-        <span class="img-title">Image 1</span>
-        <img class="image-view" src="image/image-1.jpeg" alt="Image 1">
+        <img class="image-view" src="image/image-1.jpeg" alt="Image 1"><span class="img-title">Image 1</span>
     </div>
     <div class="image">
-        <span class="img-title">Image 2</span>
-        <img class="image-view" src="image/image-1.jpeg" alt="Image 1">
+        <img class="image-view" src="image/image-1.jpeg" alt="Image 1"><span class="img-title">Image 2</span>
     </div>
     <div class="image">
-        <span class="img-title">Image 3</span>
-        <img class="image-view" src="image/image-1.jpeg" alt="Image 1">
+        <img class="image-view" src="image/image-1.jpeg" alt="Image 1"><span class="img-title">Image 3</span>
     </div>
     <div class="image">
-        <span class="img-title">Image 4</span>
-        <img class="image-view" src="image/image-1.jpeg" alt="Image 1">
+        <img class="image-view" src="image/image-1.jpeg" alt="Image 1"><span class="img-title">Image 4</span>
     </div>
     <div class="image">
-        <span class="img-title">Image 5</span>
-        <img class="image-view" src="image/image-1.jpeg" alt="Image 1">
+        <img class="image-view" src="image/image-1.jpeg" alt="Image 1"><span class="img-title">Image 5</span>
     </div>
 </div>
 </body>
